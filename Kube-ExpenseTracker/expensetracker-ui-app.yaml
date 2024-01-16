@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expensetracker-ui-deployment
+  labels:
+    app: expensetracker-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: expensetracker-ui
+  template:
+    metadata:
+      labels:
+        app: expensetracker-ui
+    spec:
+      containers:
+        - name: expensetracker-ui
+          image: kalyankumar21/expensetracker-ui:1.0
+          ports:
+            - containerPort: 3000
