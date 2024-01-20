@@ -8,3 +8,4 @@ spec:
       image: kalyankumar21/my-node-app:2.0
       ports:
         - containerPort: 3000
+# emptyDir: {} This is on a pod level means when the pod get delete all the data in the pod will be deleted
